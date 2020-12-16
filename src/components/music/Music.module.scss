@@ -1,0 +1,92 @@
+$image-size: 64px;
+
+%ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.container {
+    width: 100%;
+
+    & > :not(:first-child) {
+        margin-top: 10px;
+    }
+}
+.card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #efefef;
+    border-radius: 10px;
+}
+
+.summary {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.left {
+    width: $image-size;
+}
+
+.right {
+    padding: 5px;
+    width: calc(100% - (#{$image-size} * 1.3));
+    text-align: center;
+
+    .name {
+        font-weight: 900;
+        margin: 0;
+        @extend %ellipsis;
+    }
+
+    .artists {
+        font-size: 0.9em;
+        color: #3a3636;
+        @extend %ellipsis;
+    }
+}
+
+.detail {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    overflow-y: hidden;
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        max-height: 100vh;
+    }
+
+    h4 {
+        margin: 0;
+        padding: 5px 0;
+    }
+}
+
+.externalLink {
+    float: right;
+}
+
+.iframe {
+    border: none;
+    width: 100%;
+}
+
+.embedMusic iframe {
+    height: 80px;
+}
+
+.embedAlbum iframe {
+    height: 240px;
+}

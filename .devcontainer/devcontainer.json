@@ -1,0 +1,26 @@
+{
+    "name": "seudev/node-4dev:1.4",
+    "dockerComposeFile": ["docker-compose.yml"],
+    "service": "workspace",
+    "workspaceFolder": "/usr/src/app",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "coenraads.bracket-pair-colorizer",
+        "bierner.color-info",
+        "esbenp.prettier-vscode",
+        "rintoj.json-organizer",
+        "bierner.github-markdown-preview",
+        "britesnow.vscode-toggle-quotes",
+        "chakrounanas.turbo-console-log",
+        "msjsdiag.debugger-for-chrome"
+    ],
+    "remote.extensionKind": {
+        "msjsdiag.debugger-for-chrome": ["ui"]
+    },
+    "runArgs": ["--env-file", "${localWorkspaceFolder}/.env"],
+    "postStartCommand": ["init-container"],
+    "forwardPorts": [3000],
+    "overrideCommand": false
+}

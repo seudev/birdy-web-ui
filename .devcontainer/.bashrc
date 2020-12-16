@@ -1,0 +1,7 @@
+alias reload-bashrc='source $WORKDIR/.devcontainer/.bashrc'
+alias reload-env='source $WORKDIR/.env'
+alias workdir='cd $WORKDIR'
+alias dev='npm run dev'
+alias start='npm run start'
+alias build='npm run build'
+alias install='npm install'

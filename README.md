@@ -11,7 +11,7 @@ This project is splitted in two repositories:
 
 Birds migrate acording to the tempeture also they can change their pattern of singing in different stages of live, such as during the reproductive period that also has to do with the tempeture (when is hotter).
 
-Credits by the name to [@anakrdo](https://www.instagram.com/anakrdo)
+Credits for the name to [@anakrdo](https://www.instagram.com/anakrdo)
 
 ## birdy-web-ui
 
